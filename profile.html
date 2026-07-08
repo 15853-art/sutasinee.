@@ -1,29 +1,88 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว | สุธาศิณี นาคนวล</title>
+    <style>
+        /* สไตล์หลักธีมฟ้าพาสเทล */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #EBF4F6; /* สีฟ้าพาสเทล */
+            color: #2C3E50;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* แถบเมนูด้านบน (เหมือนกับหน้าแรก) */
+        nav {
+            background-color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        nav a {
+            text-decoration: none;
+            color: #5D6D7E;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover, nav a.active {
+            color: #3498DB; /* ไฮไลต์สีฟ้าเมื่อเลือก */
+        }
 
-    <title>ประวัติส่วนตัว</title>
+        /* ส่วนกล่องเนื้อหา */
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
+        h1 {
+            text-align: center;
+            color: #3498DB;
+            margin-bottom: 30px;
+        }
+
+        /* ตกแต่งส่วนข้อมูล */
+        .profile-info {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #F8FDFF; /* พื้นหลังกล่องข้อความฟ้าอ่อน ๆ */
+            border-left: 5px solid #B3E5FC; /* เส้นขอบข้างสีฟ้าหมีเนย */
+            border-radius: 4px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #2980B9;
+        }
+    </style>
 </head>
-
 <body>
 
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="profile.html" class="active">ประวัติส่วนตัว</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="works.html">ผลงาน</a>
+        <a href="contact.html">ช่องทางการติดต่อ</a>
+    </nav>
 
+    <div class="container">
+        <h1>🐻 ประวัติส่วนตัว (Profile)</h1>
+        
+        <div class="profile-info">
+            <p><span class="label">ชื่อ-นามสกุล:</span> นางสาวสุธาศิณี นาคนวล</p>
+            <p><span class="label">ชื่อเล่น:</span> นาย</p>
+            <p><span class="label">กำลังศึกษาชั้น:</span> มัธยมศึกษาปีที่ 6</p>
+            </div>
+    </div>
 
-<h1>ประวัติส่วนตัว</h1>
-
-</p>
-
-ชื่อ สุธาศิณี นาคนวล</br>
-
-
-
-ชื่อเล่น นาย </br>
-
-
-</p>
 </body>
-
 </html>
