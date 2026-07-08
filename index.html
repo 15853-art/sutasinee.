@@ -1,31 +1,129 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว</title>
 
-    <title>Portfolio สุธาศิณี</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: "Poppins","Sarabun",sans-serif;
+        }
 
+        body{
+            background:#f8f5f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .card{
+            width:380px;
+            background:#ffffff;
+            border-radius:25px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .header{
+            background:#d9c7b8;
+            height:140px;
+            position:relative;
+        }
+
+        .profile{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            border:5px solid white;
+            position:absolute;
+            bottom:-60px;
+            left:50%;
+            transform:translateX(-50%);
+            object-fit:cover;
+        }
+
+        .content{
+            padding:80px 30px 30px;
+            text-align:center;
+        }
+
+        h1{
+            color:#5d4037;
+            margin-bottom:10px;
+        }
+
+        h2{
+            color:#8d6e63;
+            font-size:18px;
+            margin-bottom:20px;
+            font-weight:400;
+        }
+
+        .info{
+            background:#f5f1ec;
+            padding:15px;
+            border-radius:15px;
+            text-align:left;
+            margin-top:15px;
+        }
+
+        .info p{
+            margin:12px 0;
+            color:#555;
+            font-size:17px;
+        }
+
+        .info span{
+            color:#8b5e3c;
+            font-weight:bold;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 30px;
+            background:#8b5e3c;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#6d4c41;
+        }
+    </style>
 </head>
 
-<body bgcolor="#8d7b68">
+<body>
 
-<img src="images/download (1).jpg">
+<div class="card">
 
+    <div class="header">
+        
+        <img src="profile.jpg" class="profile" alt="Profile">
+    </div>
 
+    <div class="content">
 
-นางสาวสุธาศิณี นาคนวล<br>
+        <h1>OOTD PROFILE</h1>
+        <h2>Personal Profile</h2>
 
+        <div class="info">
+            <p><span>👤 ชื่อ :</span> สุธาศิณี นาคนวล</p>
+            <p><span>💖 ชื่อเล่น :</span> นาย</p>
+        </div>
 
+        <a href="#" class="btn">Follow Me</a>
 
-ชั้นมัธยมศึกษาปีที่6/1<br>
+    </div>
 
-
-
-โรงเรียนพานทอง<br>
-
-
+</div>
 
 </body>
-
 </html>
