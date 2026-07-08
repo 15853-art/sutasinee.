@@ -86,15 +86,24 @@ h2{
     font-weight:bold;
 }
 
-.btn{
-    display:inline-block;
+/* เมนูปุ่ม */
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
     margin-top:25px;
+}
+
+.btn{
+    display:block;
     background:#6D4C41;
     color:white;
     text-decoration:none;
-    padding:12px 35px;
+    padding:12px;
     border-radius:30px;
     transition:.3s;
+    font-size:17px;
+    font-weight:bold;
 }
 
 .btn:hover{
@@ -133,13 +142,12 @@ h2{
 <div class="bear" style="left:75%;animation-duration:9s;">🍒</div>
 <div class="bear" style="left:85%;animation-duration:10s;">🍒</div>
 <div class="bear" style="left:95%;animation-duration:8s;">🍒</div>
+
 <div class="card">
 
     <div class="header">
-
-       
-       <img src="lmages/1000029747.jpg" class="profile" alt="Profile">
-
+        <!-- เปลี่ยนชื่อโฟลเดอร์เป็น Images หากจำเป็น -->
+        <img src="Images/1000029747.jpg" class="profile" alt="Profile">
     </div>
 
     <div class="content">
@@ -152,7 +160,13 @@ h2{
             <p><span>🤎 ชื่อเล่น :</span> นาย</p>
         </div>
 
-        <a href="#" class="btn">Welcome</a>
+        <!-- เมนู -->
+        <div class="menu">
+            <a href="profile.html" class="btn">👤 ประวัติส่วนตัว</a>
+            <a href="education.html" class="btn">🎓 ประวัติการศึกษา</a>
+            <a href="works.html" class="btn">🏆 ผลงาน</a>
+            <a href="contact.html" class="btn">📞 ช่องทางการติดต่อ</a>
+        </div>
 
     </div>
 
@@ -160,4 +174,3 @@ h2{
 
 </body>
 </html>
-```
