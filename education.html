@@ -1,1 +1,213 @@
 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ประวัติการศึกษา</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins","Sarabun",sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#3E2723,#5D4037,#8D6E63);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:40px 20px;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* เชอร์รี่ */
+.bear{
+    position:absolute;
+    top:-60px;
+    font-size:28px;
+    animation:fall linear infinite;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-100px) rotate(0deg);}
+    100%{transform:translateY(120vh) rotate(360deg);}
+}
+
+/* การ์ด */
+.card{
+    width:900px;
+    max-width:95%;
+    background:rgba(255,248,240,.96);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    z-index:2;
+}
+
+h1{
+    text-align:center;
+    color:#4E342E;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+/* Timeline */
+.timeline{
+    position:relative;
+    margin-left:20px;
+    padding-left:40px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#8D6E63;
+    border-radius:10px;
+}
+
+.item{
+    position:relative;
+    background:#F4ECE7;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:25px;
+}
+
+.item::before{
+    content:"";
+    position:absolute;
+    left:-38px;
+    top:28px;
+    width:18px;
+    height:18px;
+    background:#6D4C41;
+    border:4px solid white;
+    border-radius:50%;
+}
+
+.item h2{
+    color:#4E342E;
+    margin-bottom:10px;
+}
+
+.item p{
+    margin:6px 0;
+    color:#5D4037;
+}
+
+.item span{
+    font-weight:bold;
+}
+
+/* ปุ่ม */
+.menu{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:35px;
+}
+
+.btn{
+    flex:1;
+    text-align:center;
+    background:#6D4C41;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#4E342E;
+    transform:scale(1.05);
+}
+
+@media(max-width:768px){
+
+.timeline{
+padding-left:30px;
+}
+
+.item::before{
+left:-30px;
+}
+
+.menu{
+flex-direction:column;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="bear" style="left:5%;animation-duration:8s;">🍒</div>
+<div class="bear" style="left:15%;animation-duration:10s;">🍒</div>
+<div class="bear" style="left:25%;animation-duration:7s;">🍒</div>
+<div class="bear" style="left:35%;animation-duration:9s;">🍒</div>
+<div class="bear" style="left:45%;animation-duration:12s;">🍒</div>
+<div class="bear" style="left:55%;animation-duration:8s;">🍒</div>
+<div class="bear" style="left:65%;animation-duration:11s;">🍒</div>
+<div class="bear" style="left:75%;animation-duration:9s;">🍒</div>
+<div class="bear" style="left:85%;animation-duration:10s;">🍒</div>
+<div class="bear" style="left:95%;animation-duration:8s;">🍒</div>
+
+<div class="card">
+
+<h1>🎓 ประวัติการศึกษา</h1>
+
+<div class="timeline">
+
+<div class="item">
+<h2>🧸 ระดับอนุบาล</h2>
+<p><span>โรงเรียน :</span> โรงเรียนเทศบาล 2 (วัดภูเขาดิน)</p>
+<p><span>ปีการศึกษา :</span> 2558</p>
+</div>
+
+<div class="item">
+<h2>📚 ระดับประถมศึกษา</h2>
+<p><span>โรงเรียน :</span> โรงเรียนบ้านคลองบง</p>
+<p><span>ปีการศึกษา :</span> 2564</p>
+<p><span>GPAX :</span> ............</p>
+</div>
+
+<div class="item">
+<h2>🏫 มัธยมศึกษาตอนต้น</h2>
+<p><span>โรงเรียน :</span> โรงเรียนพานทอง</p>
+<p><span>ปีการศึกษา :</span> 2567</p>
+<p><span>แผนการเรียน :</span> วิทยาศาสตร์–คณิตศาสตร์</p>
+<p><span>GPAX :</span> 3.80</p>
+</div>
+
+<div class="item">
+<h2>🎓 มัธยมศึกษาตอนปลาย</h2>
+<p><span>โรงเรียน :</span> โรงเรียนพานทอง</p>
+<p><span>ปีการศึกษา :</span> 2570</p>
+<p><span>แผนการเรียน :</span> วิทยาศาสตร์–คณิตศาสตร์</p>
+<p><span>GPAX :</span> 3.64</p>
+</div>
+
+</div>
+
+<div class="menu">
+<a href="profile.html" class="btn">⬅ ประวัติส่วนตัว</a>
+<a href="certificate.html" class="btn">🏆 เกียรติบัตร ➜</a>
+</div>
+
+</div>
+
+</body>
+</html>
