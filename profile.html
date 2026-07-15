@@ -32,7 +32,66 @@ body{
     padding:40px;
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
+h1{
+    color:#4E342E;
+    font-size:32px;
+    margin-bottom:8px;
+}
 
+h2{
+    color:#795548;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.info{
+    background:#F4ECE7;
+    border-radius:15px;
+    padding:18px;
+    text-align:left;
+}
+
+.info p{
+    margin:12px 0;
+    color:#4E342E;
+    font-size:17px;
+}
+
+.info span{
+    font-weight:bold;
+}
+
+/* เมนูปุ่ม */
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:25px;
+}
+
+.btn{
+    display:block;
+    background:#6D4C41;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:30px;
+    transition:.3s;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#4E342E;
+    transform:scale(1.05);
+}
+
+.bear{
+    position:absolute;
+    top:-60px;
+    font-size:30px;
+    animation:fall linear infinite;
+    pointer-events:none;
 h1{
     text-align:center;
     color:#1f4e79;
