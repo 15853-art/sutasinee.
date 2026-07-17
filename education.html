@@ -1,12 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ประวัติการศึกษา</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -15,155 +20,351 @@
 }
 
 body{
+
     background:linear-gradient(180deg,#3E2723,#5D4037,#8D6E63);
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     min-height:100vh;
+
     padding:40px 20px;
+
     overflow-x:hidden;
+
     position:relative;
+
 }
 
-/* เชอร์รี่ */
-.bear{
-    position:absolute;
+/* ===== เชอร์รี่ ===== */
+
+.cherry{
+
+    position:fixed;
+
     top:-60px;
-    font-size:28px;
+
+    font-size:30px;
+
     animation:fall linear infinite;
+
     pointer-events:none;
+
+    z-index:1;
+
 }
 
 @keyframes fall{
-    0%{transform:translateY(-100px) rotate(0deg);}
-    100%{transform:translateY(120vh) rotate(360deg);}
+
+    0%{
+
+        transform:translateY(-100px) rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:translateY(120vh) rotate(360deg);
+
+    }
+
 }
 
-/* การ์ด */
+/* ===== การ์ด ===== */
+
 .card{
-    width:900px;
+
+    width:950px;
+
     max-width:95%;
+
     background:rgba(255,248,240,.96);
-    border-radius:25px;
-    padding:40px;
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
     z-index:2;
+
 }
 
 h1{
+
     text-align:center;
+
     color:#4E342E;
-    margin-bottom:40px;
-    font-size:38px;
+
+    margin-bottom:45px;
+
+    font-size:40px;
+
 }
 
-/* Timeline */
+/* ===== Timeline ===== */
+
 .timeline{
+
     position:relative;
+
     margin-left:20px;
-    padding-left:40px;
+
+    padding-left:45px;
+
 }
 
 .timeline::before{
+
     content:"";
+
     position:absolute;
+
     left:10px;
+
     top:0;
+
     width:4px;
+
     height:100%;
+
     background:#8D6E63;
+
     border-radius:10px;
+
 }
 
 .item{
+
     position:relative;
+
     background:#F4ECE7;
-    border-radius:18px;
-    padding:20px;
-    margin-bottom:25px;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    transition:.3s;
+
+}
+
+.item:hover{
+
+    transform:translateX(8px);
+
+    box-shadow:0 10px 20px rgba(78,52,46,.15);
+
 }
 
 .item::before{
+
     content:"";
+
     position:absolute;
-    left:-38px;
-    top:28px;
+
+    left:-43px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
     width:18px;
+
     height:18px;
+
     background:#6D4C41;
+
     border:4px solid white;
+
     border-radius:50%;
+
+}
+
+/* ===== รูปตราโรงเรียน ===== */
+
+.school-logo{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:contain;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:8px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    flex-shrink:0;
+
+}
+
+/* ===== ข้อมูล ===== */
+
+.item-content{
+
+    flex:1;
+
 }
 
 .item h2{
+
     color:#4E342E;
-    margin-bottom:10px;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
 }
 
 .item p{
-    margin:6px 0;
+
+    margin:7px 0;
+
     color:#5D4037;
+
+    font-size:17px;
+
 }
 
 .item span{
+
     font-weight:bold;
+
+    color:#4E342E;
+
 }
 
-/* ปุ่ม */
+/* ===== ปุ่ม ===== */
+
 .menu{
+
     display:flex;
+
     justify-content:space-between;
+
     gap:15px;
-    margin-top:35px;
+
+    margin-top:40px;
+
 }
 
 .btn{
+
     flex:1;
+
     text-align:center;
+
     background:#6D4C41;
+
     color:white;
+
     text-decoration:none;
-    padding:14px;
+
+    padding:15px;
+
     border-radius:30px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
 .btn:hover{
+
     background:#4E342E;
+
     transform:scale(1.05);
+
 }
+
+/* ===== Responsive ===== */
 
 @media(max-width:768px){
 
-.timeline{
-padding-left:30px;
+    .card{
+
+        padding:25px 18px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+    .timeline{
+
+        padding-left:30px;
+
+    }
+
+    .item{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .item::before{
+
+        left:-30px;
+
+    }
+
+    .school-logo{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .menu{
+
+        flex-direction:column;
+
+    }
+
 }
 
-.item::before{
-left:-30px;
-}
-
-.menu{
-flex-direction:column;
-}
-
-}
 </style>
 
 </head>
+
 <body>
 
-<div class="bear" style="left:5%;animation-duration:8s;">🍒</div>
-<div class="bear" style="left:15%;animation-duration:10s;">🍒</div>
-<div class="bear" style="left:25%;animation-duration:7s;">🍒</div>
-<div class="bear" style="left:35%;animation-duration:9s;">🍒</div>
-<div class="bear" style="left:45%;animation-duration:12s;">🍒</div>
-<div class="bear" style="left:55%;animation-duration:8s;">🍒</div>
-<div class="bear" style="left:65%;animation-duration:11s;">🍒</div>
-<div class="bear" style="left:75%;animation-duration:9s;">🍒</div>
-<div class="bear" style="left:85%;animation-duration:10s;">🍒</div>
-<div class="bear" style="left:95%;animation-duration:8s;">🍒</div>
+<!-- เชอร์รี่ -->
+
+<div class="cherry" style="left:5%;animation-duration:8s;">🍒</div>
+<div class="cherry" style="left:15%;animation-duration:10s;">🍒</div>
+<div class="cherry" style="left:25%;animation-duration:7s;">🍒</div>
+<div class="cherry" style="left:35%;animation-duration:9s;">🍒</div>
+<div class="cherry" style="left:45%;animation-duration:12s;">🍒</div>
+<div class="cherry" style="left:55%;animation-duration:8s;">🍒</div>
+<div class="cherry" style="left:65%;animation-duration:11s;">🍒</div>
+<div class="cherry" style="left:75%;animation-duration:9s;">🍒</div>
+<div class="cherry" style="left:85%;animation-duration:10s;">🍒</div>
+<div class="cherry" style="left:95%;animation-duration:8s;">🍒</div>
+
+<!-- การ์ด -->
 
 <div class="card">
 
@@ -171,43 +372,149 @@ flex-direction:column;
 
 <div class="timeline">
 
+<!-- อนุบาล -->
+
 <div class="item">
+
+<img src="FB_IMG_1784319479447.jpg" class="school-logo">
+
+<div class="item-content">
+
 <h2>🧸 ระดับอนุบาล</h2>
-<p><span>โรงเรียน :</span> โรงเรียนเทศบาล 2 (วัดภูเขาดิน)</p>
-<p><span>ปีการศึกษา :</span> 2558</p>
+
+<p>
+<span>โรงเรียน :</span>
+โรงเรียนเทศบาล 2 (วัดภูเขาดิน)
+</p>
+
+<p>
+<span>ปีการศึกษา :</span>
+2558
+</p>
+
 </div>
 
+</div>
+
+<!-- ประถม -->
+
 <div class="item">
+
+<img src="FB_IMG_1784319464451.jpg" class="school-logo">
+
+<div class="item-content">
+
 <h2>📚 ระดับประถมศึกษา</h2>
-<p><span>โรงเรียน :</span> โรงเรียนบ้านคลองบง</p>
-<p><span>ปีการศึกษา :</span> 2564</p>
-<p><span>GPAX :</span> ............</p>
+
+<p>
+<span>โรงเรียน :</span>
+โรงเรียนบ้านคลองบง
+</p>
+
+<p>
+<span>ปีการศึกษา :</span>
+2564
+</p>
+
+<p>
+<span>GPAX :</span>
+3.75
+</p>
+
 </div>
 
+</div>
+
+<!-- มัธยมต้น -->
+
 <div class="item">
+
+<img src="FB_IMG_1784319498009.jpg" class="school-logo">
+
+<div class="item-content">
+
 <h2>🏫 มัธยมศึกษาตอนต้น</h2>
-<p><span>โรงเรียน :</span> โรงเรียนพานทอง</p>
-<p><span>ปีการศึกษา :</span> 2567</p>
-<p><span>แผนการเรียน :</span> วิทยาศาสตร์–คณิตศาสตร์</p>
-<p><span>GPAX :</span> 3.80</p>
+
+<p>
+<span>โรงเรียน :</span>
+โรงเรียนพานทอง
+</p>
+
+<p>
+<span>ปีการศึกษา :</span>
+2567
+</p>
+
+<p>
+<span>แผนการเรียน :</span>
+วิทยาศาสตร์–คณิตศาสตร์
+</p>
+
+<p>
+<span>GPAX :</span>
+3.81
+</p>
+
 </div>
+
+</div>
+
+<!-- มัธยมปลาย -->
 
 <div class="item">
+
+<img src="FB_IMG_1784319498009.jpg" class="school-logo">
+
+<div class="item-content">
+
 <h2>🎓 มัธยมศึกษาตอนปลาย</h2>
-<p><span>โรงเรียน :</span> โรงเรียนพานทอง</p>
-<p><span>ปีการศึกษา :</span> 2570</p>
-<p><span>แผนการเรียน :</span> วิทยาศาสตร์–คณิตศาสตร์</p>
-<p><span>GPAX :</span> 3.64</p>
+
+<p>
+<span>โรงเรียน :</span>
+โรงเรียนพานทอง
+</p>
+
+<p>
+<span>ปีการศึกษา :</span>
+2570
+</p>
+
+<p>
+<span>แผนการเรียน :</span>
+วิทยาศาสตร์–คณิตศาสตร์
+</p>
+
+<p>
+<span>GPAX :</span>
+3.64
+</p>
+
 </div>
 
 </div>
+
+</div>
+
+<!-- ปุ่ม -->
 
 <div class="menu">
-<a href="profile.html" class="btn">⬅ ประวัติส่วนตัว</a>
-<a href="certificate.html" class="btn">🏆 เกียรติบัตร ➜</a>
+
+<a href="profile.html" class="btn">
+
+⬅ ประวัติส่วนตัว
+
+</a>
+
+<a href="certificate.html" class="btn">
+
+🏆 เกียรติบัตร ➜
+
+</a>
+
 </div>
 
 </div>
 
 </body>
+
 </html>
