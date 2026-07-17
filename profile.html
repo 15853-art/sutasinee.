@@ -1,169 +1,245 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ประวัติส่วนตัว</title>
+
+<title>Profile | Sutasinee Naknual</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Poppins","Sarabun",sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:linear-gradient(180deg,#3E2723,#5D4037,#8D6E63);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    overflow:hidden;
-    position:relative;
-    padding:40px 20px;
+font-family:"Sarabun",sans-serif;
+background:linear-gradient(180deg,#3E2723,#5D4037,#8D6E63);
+min-height:100vh;
+padding:120px 20px 40px;
+color:#4E342E;
 }
 
-/* เชอร์รี่ */
-.bear{
-    position:absolute;
-    top:-60px;
-    font-size:30px;
-    animation:fall linear infinite;
-    pointer-events:none;
+nav{
+position:fixed;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:8px;
+padding:10px 18px;
+background:rgba(255,248,240,.95);
+border-radius:50px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+z-index:10;
 }
 
-@keyframes fall{
-    0%{
-        transform:translateY(-100px) rotate(0deg);
-    }
-    100%{
-        transform:translateY(120vh) rotate(360deg);
-    }
+nav a{
+text-decoration:none;
+color:#5D4037;
+padding:10px 15px;
+border-radius:25px;
+font-weight:600;
+font-size:15px;
 }
 
-/* กล่อง */
+nav a:hover{
+background:#6D4C41;
+color:white;
+}
+
 .card{
-    width:900px;
-    max-width:95%;
-    background:rgba(255,248,240,.95);
-    border-radius:25px;
-    padding:40px;
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
-    z-index:2;
+max-width:1000px;
+margin:auto;
+background:rgba(255,248,240,.96);
+border-radius:35px;
+padding:50px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
 h1{
-    text-align:center;
-    color:#4E342E;
-    margin-bottom:30px;
-    font-size:38px;
+text-align:center;
+font-family:"Playfair Display",serif;
+font-size:55px;
+color:#3E2723;
+margin-bottom:40px;
 }
 
 .info{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin-bottom:30px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-bottom:30px;
 }
 
 .item{
-    background:#F4ECE7;
-    padding:15px;
-    border-radius:15px;
-    color:#4E342E;
-    font-size:17px;
+background:#F4ECE7;
+padding:18px;
+border-radius:15px;
+font-size:17px;
 }
 
 .item strong{
-    color:#3E2723;
+color:#3E2723;
 }
 
 .about{
-    background:#F4ECE7;
-    padding:20px;
-    border-radius:18px;
-    color:#4E342E;
-    line-height:1.9;
-    text-align:justify;
-    margin-bottom:25px;
+background:#F4ECE7;
+padding:25px;
+border-radius:20px;
+line-height:2;
+text-align:justify;
+margin-bottom:25px;
 }
 
 .quote{
-    background:#6D4C41;
-    color:white;
-    padding:18px;
-    border-radius:18px;
-    text-align:center;
-    font-size:18px;
-    font-style:italic;
+background:#6D4C41;
+color:white;
+padding:20px;
+border-radius:20px;
+text-align:center;
+font-size:19px;
+font-style:italic;
 }
 
-/* ปุ่ม */
 .next-btn{
-    display:block;
-    width:240px;
-    margin:30px auto 0;
-    padding:14px;
-    text-align:center;
-    text-decoration:none;
-    background:#6D4C41;
-    color:white;
-    border-radius:30px;
-    font-size:17px;
-    font-weight:bold;
-    transition:.3s;
+display:block;
+width:260px;
+margin:30px auto 0;
+padding:15px;
+text-align:center;
+text-decoration:none;
+background:#5D4037;
+color:white;
+border-radius:30px;
+font-weight:bold;
 }
 
-.next-btn:hover{
-    background:#4E342E;
-    transform:scale(1.05);
+footer{
+text-align:center;
+color:white;
+padding:25px;
 }
 
 @media(max-width:768px){
+
+nav{
+width:95%;
+overflow-x:auto;
+}
+
+nav a{
+white-space:nowrap;
+font-size:13px;
+}
+
+.card{
+padding:30px 20px;
+}
+
 .info{
 grid-template-columns:1fr;
 }
+
+h1{
+font-size:40px;
+}
+
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="bear" style="left:5%;animation-duration:8s;">🍒</div>
-<div class="bear" style="left:15%;animation-duration:10s;">🍒</div>
-<div class="bear" style="left:25%;animation-duration:7s;">🍒</div>
-<div class="bear" style="left:35%;animation-duration:9s;">🍒</div>
-<div class="bear" style="left:45%;animation-duration:12s;">🍒</div>
-<div class="bear" style="left:55%;animation-duration:8s;">🍒</div>
-<div class="bear" style="left:65%;animation-duration:11s;">🍒</div>
-<div class="bear" style="left:75%;animation-duration:9s;">🍒</div>
-<div class="bear" style="left:85%;animation-duration:10s;">🍒</div>
-<div class="bear" style="left:95%;animation-duration:8s;">🍒</div>
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="sop.html">📝 SOP</a>
+<a href="profile.html">👤 Profile</a>
+<a href="education.html">🎓 Education</a>
+<a href="award.html">🏆 Awards</a>
+<a href="contact.html">📞 Contact</a>
+</nav>
 
 <div class="card">
 
 <h1>ประวัติส่วนตัว</h1>
 
 <div class="info">
-<div class="item"><strong>ชื่อ-นามสกุล :</strong> นางสาวสุธาศิณี นาคนวล</div>
-<div class="item"><strong>ชื่อเล่น :</strong> นาย</div>
-<div class="item"><strong>อายุ :</strong> 18 ปี</div>
-<div class="item"><strong>โรงเรียน :</strong> โรงเรียนพานทอง</div>
-<div class="item"><strong>ระดับชั้น :</strong> มัธยมศึกษาปีที่ 6</div>
-<div class="item"><strong>แผนการเรียน :</strong> วิทยาศาสตร์–คณิตศาสตร์</div>
-<div class="item"><strong>งานอดิเรก :</strong> อ่านหนังสือ ฟังเพลง และออกกำลังกาย</div>
-<div class="item"><strong>ความสนใจ :</strong> การพยาบาลและการดูแลสุขภาพ</div>
-<div class="item"><strong>โทรศัพท์ :</strong> 088-274-7006</div>
-<div class="item"><strong>E-mail :</strong> nakhnwlsuthasini@gmail.com</div>
+
+<div class="item">
+<strong>ชื่อ-นามสกุล :</strong>
+นางสาวสุธาศิณี นาคนวล
+</div>
+
+<div class="item">
+<strong>ชื่อภาษาอังกฤษ :</strong>
+Sutasinee Naknual
+</div>
+
+<div class="item">
+<strong>ชื่อเล่น :</strong>
+นาย
+</div>
+
+<div class="item">
+<strong>อายุ :</strong>
+18 ปี
+</div>
+
+<div class="item">
+<strong>โรงเรียน :</strong>
+โรงเรียนพานทอง
+</div>
+
+<div class="item">
+<strong>ระดับชั้น :</strong>
+มัธยมศึกษาปีที่ 6
+</div>
+
+<div class="item">
+<strong>แผนการเรียน :</strong>
+วิทยาศาสตร์–คณิตศาสตร์
+</div>
+
+<div class="item">
+<strong>งานอดิเรก :</strong>
+อ่านหนังสือ ฟังเพลง และออกกำลังกาย
+</div>
+
+<div class="item">
+<strong>ความสนใจ :</strong>
+การพยาบาลและการดูแลสุขภาพ
+</div>
+
+<div class="item">
+<strong>โทรศัพท์ :</strong>
+062-720-7904
+</div>
+
+<div class="item">
+<strong>E-mail :</strong>
+nakhnwlsuthasini@gmail.com
+</div>
+
 </div>
 
 <div class="about">
-ดิฉันเป็นคนร่าเริง มีความรับผิดชอบ และตั้งใจทำในสิ่งที่ได้รับมอบหมายให้ดีที่สุด ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาตัวเองอยู่เสมอ สามารถทำงานร่วมกับผู้อื่นได้ดี รับฟังความคิดเห็นของคนรอบข้าง และพร้อมให้ความช่วยเหลือเมื่อมีโอกาส ดิฉันเชื่อว่าการเรียนรู้และการพัฒนาตนเองอย่างต่อเนื่องจะช่วยให้เติบโตทั้งในด้านความรู้และประสบการณ์ ความฝันของดิฉันคือการได้ศึกษาต่อในคณะพยาบาลศาสตร์ เพื่อนำความรู้ไปดูแลผู้ป่วยและช่วยเหลือผู้อื่นอย่างเต็มความสามารถ พร้อมพัฒนาตนเองให้เป็นพยาบาลที่มีทั้งความรู้ ความรับผิดชอบ และจิตใจที่เปี่ยมด้วยความเมตตา
+
+ดิฉันเป็นคนร่าเริง มีความรับผิดชอบ และตั้งใจทำในสิ่งที่ได้รับมอบหมายให้ดีที่สุด ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาตนเองอยู่เสมอ สามารถทำงานร่วมกับผู้อื่นได้ดี รับฟังความคิดเห็นของคนรอบข้าง และพร้อมให้ความช่วยเหลือเมื่อมีโอกาส ดิฉันเชื่อว่าการเรียนรู้และการพัฒนาตนเองอย่างต่อเนื่องจะช่วยให้เติบโตทั้งในด้านความรู้และประสบการณ์ ความฝันของดิฉันคือการได้ศึกษาต่อในคณะพยาบาลศาสตร์ เพื่อนำความรู้ไปดูแลผู้ป่วยและช่วยเหลือผู้อื่นอย่างเต็มความสามารถ
+
 </div>
 
 <div class="quote">
+
 “เชื่อว่าการเรียนรู้ไม่มีที่สิ้นสุด และทุกความพยายามล้วนมีคุณค่า”
+
 </div>
 
 <a href="education.html" class="next-btn">
@@ -171,6 +247,10 @@ grid-template-columns:1fr;
 </a>
 
 </div>
+
+<footer>
+🍒 SUTASINEE NAKNUAL 🍒
+</footer>
 
 </body>
 </html>
