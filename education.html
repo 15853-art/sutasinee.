@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ประวัติการศึกษา</title>
+<title>SOP | Sutasinee Naknual Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,12 +16,151 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Poppins","Sarabun",sans-serif;
 }
 
 body{
 
-    background:linear-gradient(180deg,#3E2723,#5D4037,#8D6E63);
+    font-family:"Sarabun",sans-serif;
+
+    background:
+    linear-gradient(135deg,#2E1B18,#5D4037 50%,#A1887F);
+
+    min-height:100vh;
+
+    color:#4E342E;
+
+    overflow-x:hidden;
+
+}
+
+/* ================= เชอร์รี่ ================= */
+
+.cherry{
+
+    position:fixed;
+
+    font-size:30px;
+
+    opacity:.75;
+
+    animation:float 5s ease-in-out infinite;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+.c1{
+    top:12%;
+    left:6%;
+}
+
+.c2{
+    top:25%;
+    right:8%;
+    animation-delay:1s;
+}
+
+.c3{
+    bottom:20%;
+    left:8%;
+    animation-delay:2s;
+}
+
+.c4{
+    bottom:12%;
+    right:10%;
+    animation-delay:3s;
+}
+
+.c5{
+    top:8%;
+    left:50%;
+    animation-delay:1.5s;
+}
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0) rotate(-5deg);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px) rotate(8deg);
+
+    }
+
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+
+    position:fixed;
+
+    top:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    background:rgba(255,248,240,.95);
+
+    border-radius:50px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    z-index:10;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#5D4037;
+
+    padding:10px 15px;
+
+    border-radius:25px;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+}
+
+nav a:hover{
+
+    background:#6D4C41;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= SOP ================= */
+
+.sop{
+
+    min-height:100vh;
+
+    padding:140px 25px 70px;
 
     display:flex;
 
@@ -29,235 +168,201 @@ body{
 
     align-items:center;
 
-    min-height:100vh;
-
-    padding:40px 20px;
-
-    overflow-x:hidden;
-
-    position:relative;
-
 }
 
-/* ===== เชอร์รี่ ===== */
+.sop-card{
 
-.cherry{
+    max-width:1050px;
 
-    position:fixed;
-
-    top:-60px;
-
-    font-size:30px;
-
-    animation:fall linear infinite;
-
-    pointer-events:none;
-
-    z-index:1;
-
-}
-
-@keyframes fall{
-
-    0%{
-
-        transform:translateY(-100px) rotate(0deg);
-
-    }
-
-    100%{
-
-        transform:translateY(120vh) rotate(360deg);
-
-    }
-
-}
-
-/* ===== การ์ด ===== */
-
-.card{
-
-    width:950px;
-
-    max-width:95%;
+    width:100%;
 
     background:rgba(255,248,240,.96);
 
-    border-radius:30px;
+    border-radius:40px;
 
-    padding:45px;
+    padding:60px 70px;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.35);
-
-    z-index:2;
-
-}
-
-h1{
-
-    text-align:center;
-
-    color:#4E342E;
-
-    margin-bottom:45px;
-
-    font-size:40px;
-
-}
-
-/* ===== Timeline ===== */
-
-.timeline{
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
 
     position:relative;
 
-    margin-left:20px;
-
-    padding-left:45px;
+    animation:show 1s ease;
 
 }
 
-.timeline::before{
+@keyframes show{
 
-    content:"";
+    from{
 
-    position:absolute;
+        opacity:0;
 
-    left:10px;
+        transform:translateY(40px);
 
-    top:0;
+    }
 
-    width:4px;
+    to{
 
-    height:100%;
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ================= หัวข้อ ================= */
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.title small{
+
+    letter-spacing:5px;
+
+    font-size:16px;
+
+    color:#8D6E63;
+
+}
+
+.title h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:60px;
+
+    color:#3E2723;
+
+    margin:10px 0;
+
+}
+
+.title p{
+
+    font-size:20px;
+
+    color:#795548;
+
+}
+
+.line{
+
+    width:90px;
+
+    height:5px;
 
     background:#8D6E63;
 
     border-radius:10px;
 
-}
-
-.item{
-
-    position:relative;
-
-    background:#F4ECE7;
-
-    border-radius:20px;
-
-    padding:25px;
-
-    margin-bottom:30px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:25px;
-
-    transition:.3s;
+    margin:20px auto;
 
 }
 
-.item:hover{
+/* ================= เนื้อหา SOP ================= */
 
-    transform:translateX(8px);
+.sop-content{
 
-    box-shadow:0 10px 20px rgba(78,52,46,.15);
+    font-size:20px;
 
-}
-
-.item::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:-43px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:18px;
-
-    height:18px;
-
-    background:#6D4C41;
-
-    border:4px solid white;
-
-    border-radius:50%;
-
-}
-
-/* ===== รูปตราโรงเรียน ===== */
-
-.school-logo{
-
-    width:120px;
-
-    height:120px;
-
-    object-fit:contain;
-
-    background:white;
-
-    border-radius:18px;
-
-    padding:8px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-
-    flex-shrink:0;
-
-}
-
-/* ===== ข้อมูล ===== */
-
-.item-content{
-
-    flex:1;
-
-}
-
-.item h2{
-
-    color:#4E342E;
-
-    margin-bottom:12px;
-
-    font-size:24px;
-
-}
-
-.item p{
-
-    margin:7px 0;
+    line-height:2.1;
 
     color:#5D4037;
 
-    font-size:17px;
+    text-align:justify;
 
 }
 
-.item span{
+.sop-content p{
 
-    font-weight:bold;
+    margin-bottom:25px;
+
+    text-indent:50px;
+
+}
+
+.sop-content strong{
 
     color:#4E342E;
 
 }
 
-/* ===== ปุ่ม ===== */
+/* ================= กล่องความฝัน ================= */
 
-.menu{
+.dream{
 
-    display:flex;
+    margin-top:35px;
 
-    justify-content:space-between;
+    padding:25px;
 
-    gap:15px;
+    background:#F4ECE7;
+
+    border-left:6px solid #795548;
+
+    border-radius:0 20px 20px 0;
+
+    text-align:center;
+
+}
+
+.dream h2{
+
+    font-family:"Playfair Display",serif;
+
+    color:#5D4037;
+
+    margin-bottom:10px;
+
+}
+
+.dream p{
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#4E342E;
+
+}
+
+/* ================= คติ ================= */
+
+.quote{
+
+    margin-top:35px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-top:2px solid #D7CCC8;
+
+    border-bottom:2px solid #D7CCC8;
+
+}
+
+.quote p{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:25px;
+
+    font-style:italic;
+
+    color:#795548;
+
+}
+
+/* ================= ปุ่ม ================= */
+
+.button-box{
+
+    text-align:center;
 
     margin-top:40px;
 
@@ -265,21 +370,21 @@ h1{
 
 .btn{
 
-    flex:1;
+    display:inline-block;
 
-    text-align:center;
+    padding:14px 30px;
 
-    background:#6D4C41;
+    background:#5D4037;
 
     color:white;
 
     text-decoration:none;
 
-    padding:15px;
-
     border-radius:30px;
 
-    font-weight:bold;
+    font-size:17px;
+
+    font-weight:600;
 
     transition:.3s;
 
@@ -287,59 +392,71 @@ h1{
 
 .btn:hover{
 
-    background:#4E342E;
+    background:#3E2723;
 
-    transform:scale(1.05);
+    transform:translateY(-5px);
 
 }
 
-/* ===== Responsive ===== */
+/* ================= FOOTER ================= */
 
-@media(max-width:768px){
+footer{
 
-    .card{
+    text-align:center;
 
-        padding:25px 18px;
+    padding:25px;
 
-    }
+    color:#FFF8F0;
 
-    h1{
+    font-size:17px;
 
-        font-size:30px;
+}
 
-    }
+/* ================= RESPONSIVE ================= */
 
-    .timeline{
+@media(max-width:800px){
 
-        padding-left:30px;
+    nav{
 
-    }
+        width:95%;
 
-    .item{
+        overflow-x:auto;
 
-        flex-direction:column;
-
-        text-align:center;
+        justify-content:flex-start;
 
     }
 
-    .item::before{
+    nav a{
 
-        left:-30px;
+        font-size:13px;
 
-    }
-
-    .school-logo{
-
-        width:100px;
-
-        height:100px;
+        padding:8px 10px;
 
     }
 
-    .menu{
+    .sop-card{
 
-        flex-direction:column;
+        padding:40px 25px;
+
+    }
+
+    .title h1{
+
+        font-size:45px;
+
+    }
+
+    .sop-content{
+
+        font-size:18px;
+
+        line-height:1.9;
+
+    }
+
+    .quote p{
+
+        font-size:21px;
 
     }
 
@@ -351,170 +468,111 @@ h1{
 
 <body>
 
-<!-- เชอร์รี่ -->
+<!-- ================= เชอร์รี่ ================= -->
 
-<div class="cherry" style="left:5%;animation-duration:8s;">🍒</div>
-<div class="cherry" style="left:15%;animation-duration:10s;">🍒</div>
-<div class="cherry" style="left:25%;animation-duration:7s;">🍒</div>
-<div class="cherry" style="left:35%;animation-duration:9s;">🍒</div>
-<div class="cherry" style="left:45%;animation-duration:12s;">🍒</div>
-<div class="cherry" style="left:55%;animation-duration:8s;">🍒</div>
-<div class="cherry" style="left:65%;animation-duration:11s;">🍒</div>
-<div class="cherry" style="left:75%;animation-duration:9s;">🍒</div>
-<div class="cherry" style="left:85%;animation-duration:10s;">🍒</div>
-<div class="cherry" style="left:95%;animation-duration:8s;">🍒</div>
+<div class="cherry c1">🍒</div>
+<div class="cherry c2">🍒</div>
+<div class="cherry c3">🍒</div>
+<div class="cherry c4">🍒</div>
+<div class="cherry c5">🍒</div>
 
-<!-- การ์ด -->
+<!-- ================= เมนู ================= -->
 
-<div class="card">
+<nav>
 
-<h1>🎓 ประวัติการศึกษา</h1>
+<a href="index.html">🏠 Home</a>
 
-<div class="timeline">
+<a href="sop.html">📝 SOP</a>
 
-<!-- อนุบาล -->
+<a href="profile.html">👤 Profile</a>
 
-<div class="item">
+<a href="education.html">🎓 Education</a>
 
-<img src="FB_IMG_1784319479447.jpg" class="school-logo">
+<a href="certificate.html">🏆 Awards</a>
 
-<div class="item-content">
+<a href="contact.html">📞 Contact</a>
 
-<h2>🧸 ระดับอนุบาล</h2>
+</nav>
 
-<p>
-<span>โรงเรียน :</span>
-โรงเรียนเทศบาล 2 (วัดภูเขาดิน)
-</p>
+<!-- ================= SOP ================= -->
 
-<p>
-<span>ปีการศึกษา :</span>
-2558
-</p>
+<section class="sop">
 
-</div>
+<div class="sop-card">
 
-</div>
+<!-- หัวข้อ -->
 
-<!-- ประถม -->
+<div class="title">
 
-<div class="item">
+<small>STATEMENT OF PURPOSE</small>
 
-<img src="FB_IMG_1784319464451.jpg" class="school-logo">
+<h1>เหตุผลที่อยากศึกษาต่อ</h1>
 
-<div class="item-content">
+<div class="line"></div>
 
-<h2>📚 ระดับประถมศึกษา</h2>
-
-<p>
-<span>โรงเรียน :</span>
-โรงเรียนบ้านคลองบง
-</p>
-
-<p>
-<span>ปีการศึกษา :</span>
-2564
-</p>
-
-<p>
-<span>GPAX :</span>
-3.75
-</p>
+<p>วิทยาลัยพยาบาลบรมราชชนนี ชลบุรี</p>
 
 </div>
 
-</div>
+<!-- เนื้อหา -->
 
-<!-- มัธยมต้น -->
-
-<div class="item">
-
-<img src="FB_IMG_1784319498009.jpg" class="school-logo">
-
-<div class="item-content">
-
-<h2>🏫 มัธยมศึกษาตอนต้น</h2>
+<div class="sop-content">
 
 <p>
-<span>โรงเรียน :</span>
-โรงเรียนพานทอง
+
+ดิฉันชื่อ <strong>นางสาวสุธาศิณี นาคนวล</strong>
+ชื่อเล่น <strong>นาย</strong>
+กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
+โรงเรียนพานทอง แผนการเรียนวิทยาศาสตร์–คณิตศาสตร์
+ดิฉันมีความตั้งใจที่จะศึกษาต่อใน
+<strong>วิทยาลัยพยาบาลบรมราชชนนี ชลบุรี</strong>
+เพราะการพยาบาลเป็นอาชีพที่ดิฉันสนใจและเป็นความฝันที่อยากทำในอนาคต
+
 </p>
 
 <p>
-<span>ปีการศึกษา :</span>
-2567
+
+ดิฉันมองว่าอาชีพพยาบาลไม่ได้มีหน้าที่เพียงดูแลผู้ป่วยเท่านั้น
+แต่ยังเป็นอาชีพที่ต้องใช้ทั้งความรู้ ความรับผิดชอบ
+ความอดทน ความเสียสละ และความเข้าใจผู้อื่น
+การได้ช่วยเหลือและดูแลผู้คนในช่วงเวลาที่พวกเขาต้องการความช่วยเหลือ
+เป็นสิ่งที่ทำให้ดิฉันรู้สึกว่าอาชีพพยาบาลเป็นอาชีพที่มีคุณค่า
+และสามารถสร้างประโยชน์ให้แก่ผู้อื่นและสังคมได้
+
 </p>
 
 <p>
-<span>แผนการเรียน :</span>
-วิทยาศาสตร์–คณิตศาสตร์
+
+ตลอดระยะเวลาที่ผ่านมา ดิฉันพยายามเรียนรู้และพัฒนาตนเอง
+ผ่านการเข้าร่วมกิจกรรมและประสบการณ์ต่าง ๆ
+เช่น การเข้าร่วมอบรมโครงการ EEC
+การเข้าร่วม Open House มหาวิทยาลัยธรรมศาสตร์
+และค่ายพอร์ตพาทำของโรงเรียน
+นอกจากนี้ ดิฉันยังได้เข้าร่วมกิจกรรมจิตอาสา
+การเป็นสมาชิกสภานักเรียน
+การเป็นผู้นำจิตอาสายุวกาชาด
+รวมถึงการเป็นสตาฟ Science Show และสตาฟค่าย STEAM DAY CAMP
+
 </p>
 
 <p>
-<span>GPAX :</span>
-3.81
-</p>
 
-</div>
+ประสบการณ์ที่ทำให้ดิฉันได้เรียนรู้เกี่ยวกับการทำงานด้านสุขภาพมากขึ้น
+คือการได้ฝึกงานที่โรงพยาบาลส่งเสริมสุขภาพตำบลบ้านโคก
+ตั้งแต่วันที่ 23 ถึงวันที่ 30
+และหลังจากนั้นยังได้ไปช่วยงานอย่างต่อเนื่อง
+จนได้รับเกียรติบัตรจากการปฏิบัติงาน
+ประสบการณ์ครั้งนี้ทำให้ดิฉันได้เรียนรู้การทำงานจริง
+การมีความรับผิดชอบ การทำงานร่วมกับผู้อื่น
+และการช่วยเหลือผู้คน
+ซึ่งทำให้ดิฉันมีความมั่นใจและตั้งใจที่จะเดินตามความฝัน
+ในการศึกษาต่อด้านการพยาบาลมากยิ่งขึ้น
 
-</div>
-
-<!-- มัธยมปลาย -->
-
-<div class="item">
-
-<img src="FB_IMG_1784319498009.jpg" class="school-logo">
-
-<div class="item-content">
-
-<h2>🎓 มัธยมศึกษาตอนปลาย</h2>
-
-<p>
-<span>โรงเรียน :</span>
-โรงเรียนพานทอง
 </p>
 
 <p>
-<span>ปีการศึกษา :</span>
-2570
-</p>
 
-<p>
-<span>แผนการเรียน :</span>
-วิทยาศาสตร์–คณิตศาสตร์
-</p>
-
-<p>
-<span>GPAX :</span>
-3.64
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ปุ่ม -->
-
-<div class="menu">
-
-<a href="profile.html" class="btn">
-
-⬅ ประวัติส่วนตัว
-
-</a>
-
-<a href="certificate.html" class="btn">
-
-🏆 เกียรติบัตร ➜
-
-</a>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
+นอกจากนี้ ดิฉันยังได้เข้าร่วมโครงการส่งเสริมจิตอาสา
+ในการดูแลและอำนวยความสะดวกแก่ผู้บริจาคโลหิต
+ภายหลังการบริจาคเพื่อยกระดับคุณภาพงานบริการโลหิต
+ของสภากาชาด
