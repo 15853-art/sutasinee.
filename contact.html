@@ -4,9 +4,10 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SOP | Sutasinee Naknual Portfolio</title>
+<title>Contact | Sutasinee Naknual Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -83,20 +84,16 @@ body{
 @keyframes float{
 
     0%,100%{
-
         transform:translateY(0) rotate(-5deg);
-
     }
 
     50%{
-
         transform:translateY(-18px) rotate(8deg);
-
     }
 
 }
 
-/* ================= NAVBAR ================= */
+/* ================= NAV ================= */
 
 nav{
 
@@ -154,9 +151,9 @@ nav a:hover{
 
 }
 
-/* ================= SOP ================= */
+/* ================= CONTACT ================= */
 
-.sop{
+.contact{
 
     min-height:100vh;
 
@@ -170,9 +167,9 @@ nav a:hover{
 
 }
 
-.sop-card{
+.contact-card{
 
-    max-width:1050px;
+    max-width:1000px;
 
     width:100%;
 
@@ -180,11 +177,9 @@ nav a:hover{
 
     border-radius:40px;
 
-    padding:60px 70px;
+    padding:60px;
 
     box-shadow:0 30px 70px rgba(0,0,0,.35);
-
-    position:relative;
 
     animation:show 1s ease;
 
@@ -210,13 +205,13 @@ nav a:hover{
 
 }
 
-/* ================= หัวข้อ ================= */
+/* ================= TITLE ================= */
 
 .title{
 
     text-align:center;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
 
@@ -264,124 +259,462 @@ nav a:hover{
 
 }
 
-/* ================= เนื้อหา SOP ================= */
+/* ================= CONTACT BOX ================= */
 
-.sop-content{
+.contact-list{
 
-    font-size:20px;
+    display:grid;
 
-    line-height:2.1;
+    grid-template-columns:repeat(2,1fr);
 
-    color:#5D4037;
-
-    text-align:justify;
+    gap:25px;
 
 }
 
-.sop-content p{
+.contact-item{
 
-    margin-bottom:25px;
+    display:flex;
 
-    text-indent:50px;
+    align-items:center;
 
-}
-
-.sop-content strong{
-
-    color:#4E342E;
-
-}
-
-/* ================= กล่องความฝัน ================= */
-
-.dream{
-
-    margin-top:35px;
-
-    padding:25px;
+    gap:20px;
 
     background:#F4ECE7;
 
-    border-left:6px solid #795548;
+    padding:22px;
 
-    border-radius:0 20px 20px 0;
+    border-radius:25px;
+
+    transition:.3s;
+
+}
+
+.contact-item:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 12px 25px rgba(78,52,46,.2);
+
+}
+
+.icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#6D4C41;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:30px;
+
+    flex-shrink:0;
+
+}
+
+.contact-text h2{
+
+    color:#4E342E;
+
+    font-size:21px;
+
+    margin-bottom:5px;
+
+}
+
+.contact-text p{
+
+    color:#6D4C41;
+
+    font-size:16px;
+
+    word-break:break-word;
+
+}
+
+/* ================= LINK ================= */
+
+.contact-item a{
+
+    color:#6D4C41;
+
+    text-decoration:none;
+
+}
+
+.contact-item a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ================= SOCIAL ================= */
+
+.social-title{
 
     text-align:center;
 
-}
-
-.dream h2{
+    margin:45px 0 25px;
 
     font-family:"Playfair Display",serif;
 
-    color:#5D4037;
-
-    margin-bottom:10px;
-
-}
-
-.dream p{
-
-    font-size:22px;
-
-    font-weight:600;
+    font-size:30px;
 
     color:#4E342E;
 
 }
 
-/* ================= คติ ================= */
+.social{
 
-.quote{
+    display:flex;
 
-    margin-top:35px;
+    justify-content:center;
 
-    padding:30px;
+    gap:20px;
 
-    text-align:center;
-
-    border-top:2px solid #D7CCC8;
-
-    border-bottom:2px solid #D7CCC8;
+    flex-wrap:wrap;
 
 }
 
-.quote p{
+.social a{
 
-    font-family:"Playfair Display",serif;
-
-    font-size:25px;
-
-    font-style:italic;
-
-    color:#795548;
-
-}
-
-/* ================= ปุ่ม ================= */
-
-.button-box{
-
-    text-align:center;
-
-    margin-top:40px;
-
-}
-
-.btn{
-
-    display:inline-block;
-
-    padding:14px 30px;
-
-    background:#5D4037;
+    text-decoration:none;
 
     color:white;
 
-    text-decoration:none;
+    padding:15px 25px;
 
     border-radius:30px;
 
     font-size:17px;
 
-    font-weight:600;
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+}
+
+/* LINE */
+
+.line-btn{
+
+    background:#06C755;
+
+}
+
+/* INSTAGRAM */
+
+.ig-btn{
+
+    background:#8D4A65;
+
+}
+
+/* FACEBOOK */
+
+.fb-btn{
+
+    background:#4267B2;
+
+}
+
+/* ================= BUTTON ================= */
+
+.menu{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-top:45px;
+
+}
+
+.btn{
+
+    flex:1;
+
+    text-align:center;
+
+    background:#6D4C41;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#4E342E;
+
+    transform:translateY(-5px);
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#FFF8F0;
+
+    font-size:17px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        width:95%;
+
+        overflow-x:auto;
+
+        justify-content:flex-start;
+
+    }
+
+    nav a{
+
+        font-size:13px;
+
+        padding:8px 10px;
+
+    }
+
+    .contact{
+
+        padding:130px 15px 50px;
+
+    }
+
+    .contact-card{
+
+        padding:35px 20px;
+
+    }
+
+    .title h1{
+
+        font-size:45px;
+
+    }
+
+    .contact-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .menu{
+
+        flex-direction:column;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= เชอร์รี่ ================= -->
+
+<div class="cherry c1">🍒</div>
+
+<div class="cherry c2">🍒</div>
+
+<div class="cherry c3">🍒</div>
+
+<div class="cherry c4">🍒</div>
+
+<div class="cherry c5">🍒</div>
+
+<!-- ================= NAV ================= -->
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="sop.html">📝 SOP</a>
+
+<a href="profile.html">👤 Profile</a>
+
+<a href="education.html">🎓 Education</a>
+
+<a href="award.html">🏆 Awards</a>
+
+<a href="contact.html">📞 Contact</a>
+
+</nav>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+<div class="contact-card">
+
+<div class="title">
+
+<small>GET IN TOUCH</small>
+
+<h1>ติดต่อฉัน</h1>
+
+<div class="line"></div>
+
+<p>สามารถติดต่อและติดตามฉันได้ผ่านช่องทางต่าง ๆ</p>
+
+</div>
+
+<div class="contact-list">
+
+<!-- PHONE -->
+
+<div class="contact-item">
+
+<div class="icon">📞</div>
+
+<div class="contact-text">
+
+<h2>เบอร์โทรศัพท์</h2>
+
+<p>
+
+<a href="tel:0627207904">
+
+062-720-7904
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<!-- EMAIL -->
+
+<div class="contact-item">
+
+<div class="icon">✉️</div>
+
+<div class="contact-text">
+
+<h2>E-mail</h2>
+
+<p>
+
+<a href="mailto:nakhnwlsuthasini@gmail.com">
+
+nakhnwlsuthasini@gmail.com
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<h2 class="social-title">
+
+🍒 ติดตามฉันได้ที่ 🍒
+
+</h2>
+
+<div class="social">
+
+<a class="line-btn"
+href="https://line.me/ti/p/HSwGgVRHfF"
+target="_blank">
+
+💬 LINE
+
+</a>
+
+<a class="ig-btn"
+href="https://www.instagram.com/nnioay_?igsh=ZXlnbnl6NGF3bG92"
+target="_blank">
+
+📸 Instagram
+
+</a>
+
+<a class="fb-btn"
+href="https://www.facebook.com/share/1bzAFUbtMo/"
+target="_blank">
+
+👥 Facebook
+
+</a>
+
+</div>
+
+<div class="menu">
+
+<a href="award.html" class="btn">
+
+⬅ เกียรติบัตร
+
+</a>
+
+<a href="index.html" class="btn">
+
+🏠 กลับหน้า Home
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+🍒 SUTASINEE NAKNUAL 🍒
+
+<br>
+
+วิทยาลัยพยาบาลบรมราชชนนี ชลบุรี
+
+</footer>
+
+</body>
+
+</html>
